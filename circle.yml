@@ -36,4 +36,4 @@ deployment:
       - rm homepage-bin
       - docker push quay.io/horrorcheck/homepage:$(git rev-parse HEAD)
       - ssh libby@daydrea.me "docker stop homepage"
-      - ssh libby@daydrea.me "docker run --env-file .env -p 80:8000 --link redis1:redis -d  --name=homepage quay:io/horrorcheck/home:$(git rev-parse HEAD)"
+      - ssh libby@daydrea.me "docker run --env-file .env -p 80:8000 --link redis1:redis -d  --name=homepage homepage:$(git rev-parse HEAD)"
