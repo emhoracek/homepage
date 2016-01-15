@@ -1,34 +1,37 @@
-<apply template="_base"> 
-  <wp>
-    <wpNoPostDuplicates />
-    
-    <wpPostByPermalink>
+<apply template="_base">
 
-      <div class="post-date">
-        <wpDate><wpMonth />, <wpDay />, <wpYear /></wpDate>
-      </div>
+  <bind tag="page-title">Libby's website</bind>
 
-      <div class="post-title">
-        <h2><wpTitle /></h2>
-      </div>
+  <!-- Main -->
+  <div id="main">
+    <wp>
+      
+      <wpPostByPermalink>
+        
+        <div class="post-date">
+          <wpDate><wpMonth />, <wpDay />, <wpYear /></wpDate>
+        </div>
 
-      <div class="post-featured-image">
-        <img src="${wpFeaturedImage}" />
-      </div>
+        <div class="post-title">
+          <h2><wpTitle /></h2>
+        </div>
 
-      <div class="post-excerpt">
-        <wpExcerpt />
-      </div>
+        <div class="post-featured-image">
+          <wpFeaturedImage>
+            <wpContent />
+          </wpFeaturedImage>
+        </div>
 
-      <div class="post-byline">
-        by <wpAuthor><wpName /></wpAuthor>
-      </div>
+        <div class="post-byline">
+          by <wpAuthor><wpName /></wpAuthor>
+        </div>
 
-      <div class="post-content">
-        <wpContent />
-      </div>
+        <div class="post-content">
+          <wpContent />
+        </div>
 
-    </wpPostByPermalink>
+      </wpPostByPermalink>
 
-  </wp>
+    </wp>
+  </div>
 </apply>

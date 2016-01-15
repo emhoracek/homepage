@@ -16,7 +16,9 @@ cabal-version:       >=1.10
 
 executable homepage
   main-is:             Main.hs
-  -- other-modules:
+  other-modules:       Site
+                       Context
+                       Web.Fn.Extra.Heist
   -- other-extensions:
   build-depends:       base >=4.8 && <4.9
                      , fn

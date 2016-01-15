@@ -17,7 +17,6 @@ import           Network.Wai           (Application, Response, rawPathInfo)
 import           System.Directory      (doesFileExist)
 import           System.Environment    (lookupEnv)
 
-
 import           Web.Fn
 import           Web.Fn.Extra.Heist
 import           Web.Offset
@@ -28,7 +27,7 @@ site :: Ctxt -> IO Response
 site ctxt =
   route ctxt [ end ==> homeHandler
              , path "blog" ==> blogHandler
-             , path "echo" // segment ==> echoHandler
+             , path "echo" /? param "echo" ==> echoHandler
              , path "heist" ==> heistServe
              , path "static" ==> staticServe "static" ]
   `fallthrough` notFoundText "Not found."

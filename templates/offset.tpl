@@ -26,16 +26,11 @@
                 <img src="/static/images/avatar.jpg" alt="" /></a>
 	    </div>
           </header>
-          <span href="#" class="image featured">
-            <wpFeaturedImage>
-              <wpContent />
-            </wpFeaturedImage>
-            </span>
+          <a href="#" class="image featured"><img src="static/images/pic01.jpg" alt="" /></a>
           <wpContent />
           <footer>
 	    <ul class="actions">
-              <wpDate>
-	        <li><a href="/blog/${wpYear}/${wpMonth}/${wpSlug}" class="button big">Continue Reading</a></li></wpDate>
+	      <li><a href="/blog/${wpYear}/${wpMonth}/${wpSlug}" class="button big">Continue Reading</a></li>
 	    </ul>
 	    <ul class="stats">
 	      <li><a href="#">General</a></li>
