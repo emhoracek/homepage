@@ -1,6 +1,0 @@
-WP_SERVER=http://blog.daydrea.me
-WP_USER=libby
-WP_PASS=goDjfBWSn6%UjYGl%1xaUzKS
-
-REDIS_SERVER=localhost
-REDIS_AUTH=PristineWalkingProphetBullet
